@@ -1,8 +1,10 @@
 ---
+title: "Reproducible Research: Peer Assessment 1"
 output: 
-  html_document: 
-    keep_md: yes
+  html_document:
+    keep_md: true
 ---
+
 
 ```r
 sessionInfo()
@@ -131,7 +133,7 @@ hist(total_steps$steps,
      main = "Steps taken per day")  #2. Histogram
 ```
 
-![](PA1_template_files/figure-html/calculating mean-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 total_steps[, .(mean_steps = mean(steps, na.rm = TRUE), 
@@ -161,7 +163,7 @@ plot(ts_DT,
      col = "blue")      #1. Time series
 ```
 
-![](PA1_template_files/figure-html/reviewing pattern-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 ts_DT[steps == max(steps), .(max_interval = interval)] #2. Interval with max steps 
@@ -259,7 +261,7 @@ hist(total_steps2$steps,
      main = "Steps taken per day")  #4. Histogram
 ```
 
-![](PA1_template_files/figure-html/imputing missin values-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
 total_steps2[, .(mean_steps = mean(steps), 
@@ -326,4 +328,4 @@ plot(ts_wkend,
      col = "blue")      #1. Time series
 ```
 
-![](PA1_template_files/figure-html/weekdays vs weekends-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
